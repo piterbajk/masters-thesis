@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="127" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Basic Functions/Simulation; Debug and Verification/Debug and Performance,Library/Interface Protocols,Library/Basic Functions/Bridges and Adaptors/Memory Mapped,Library,Library/Interface Protocols/Serial,Library/Basic Functions,Library/Basic Functions/Bridges and Adaptors,Project,Library/Basic Functions/Simulation; Debug and Verification" />
+ <window width="1294" height="1407" x="-7" y="0" />
+ <generation path="C:/Users/pmarczew/Desktop/Nios_CI/" />
+</preferences>
