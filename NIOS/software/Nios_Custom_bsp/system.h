@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2' in SOPC Builder design 'Nios'
  * SOPC Builder design path: ../../Nios.sopcinfo
  *
- * Generated: Sun Apr 19 00:50:12 CEST 2020
+ * Generated: Sun May 03 15:23:02 CEST 2020
  */
 
 /*
@@ -141,8 +141,9 @@
  *
  */
 
-#define ALT_CI_CUSTOM_INSTRUCTION_0(A,B) __builtin_custom_inii(ALT_CI_CUSTOM_INSTRUCTION_0_N,(A),(B))
+#define ALT_CI_CUSTOM_INSTRUCTION_0(n,A,B) __builtin_custom_inii(ALT_CI_CUSTOM_INSTRUCTION_0_N+(n&ALT_CI_CUSTOM_INSTRUCTION_0_N_MASK),(A),(B))
 #define ALT_CI_CUSTOM_INSTRUCTION_0_N 0x0
+#define ALT_CI_CUSTOM_INSTRUCTION_0_N_MASK ((1<<8)-1)
 
 
 /*

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="Nios" kind="Nios" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2020.04.18.10:27:24 -->
+ <!-- 2020.05.03.17:20:12 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1587198444</value>
+  <value>1588519212</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -424,14 +424,6 @@ parameters are a RESULT of the module parameters. -->
    path="custom_instruction_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
-  <parameter name="LATENCY">
-   <type>int</type>
-   <value>0</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -449,7 +441,7 @@ the requested settings for a module instance. -->
    <valid>true</valid>
   </parameter>
   <interface
-     name="nios_custom_instruction_slave"
+     name="nios_custom_instruction_slave_1"
      kind="nios_custom_instruction_slave"
      version="18.1">
    <!-- The connection points exposed by a module instance for the
@@ -465,7 +457,7 @@ parameters are a RESULT of the module parameters. -->
    </parameter>
    <parameter name="NPort">
     <type>int</type>
-    <value>0</value>
+    <value>8</value>
     <derived>true</derived>
     <enabled>true</enabled>
     <visible>false</visible>
@@ -584,6 +576,12 @@ parameters are a RESULT of the module parameters. -->
     <direction>Output</direction>
     <width>1</width>
     <role>done</role>
+   </port>
+   <port>
+    <name>n</name>
+    <direction>Input</direction>
+    <width>8</width>
+    <role>n</role>
    </port>
   </interface>
  </module>
@@ -3972,7 +3970,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="customInstSlavesSystemInfo">
    <type>java.lang.String</type>
-   <value><![CDATA[<info><slave name="custom_instruction_0" baseAddress="0" addressSpan="1" clockCycleType="VARIABLE" /></info>]]></value>
+   <value><![CDATA[<info><slave name="custom_instruction_0" baseAddress="0" addressSpan="256" clockCycleType="VARIABLE" /></info>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -5546,8 +5544,8 @@ parameters are a RESULT of the module parameters. -->
    <customInstruction>
     <isBridge>false</isBridge>
     <moduleName>custom_instruction_0</moduleName>
-    <slaveName>nios_custom_instruction_slave</slaveName>
-    <name>custom_instruction_0.nios_custom_instruction_slave</name>
+    <slaveName>nios_custom_instruction_slave_1</slaveName>
+    <name>custom_instruction_0.nios_custom_instruction_slave_1</name>
     <opcodeNumber>0</opcodeNumber>
     <opcodeMnemonic>custom_instruction_0</opcodeMnemonic>
    </customInstruction>
@@ -6820,11 +6818,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
-   name="nios2.custom_instruction_master/custom_instruction_0.nios_custom_instruction_slave"
+   name="nios2.custom_instruction_master/custom_instruction_0.nios_custom_instruction_slave_1"
    kind="nios_custom_instruction"
    version="18.1"
    start="nios2.custom_instruction_master"
-   end="custom_instruction_0.nios_custom_instruction_slave">
+   end="custom_instruction_0.nios_custom_instruction_slave_1">
   <parameter name="CIName">
    <type>java.lang.String</type>
    <value>custom_instruction_0</value>
@@ -6884,7 +6882,7 @@ parameters are a RESULT of the module parameters. -->
   <startModule>nios2</startModule>
   <startConnectionPoint>custom_instruction_master</startConnectionPoint>
   <endModule>custom_instruction_0</endModule>
-  <endConnectionPoint>nios_custom_instruction_slave</endConnectionPoint>
+  <endConnectionPoint>nios_custom_instruction_slave_1</endConnectionPoint>
  </connection>
  <connection
    name="clk.clk_reset/nios2.reset"

@@ -66,6 +66,7 @@ module Nios (
 	wire         nios2_custom_instruction_master_multi_slave_translator0_ci_master_start;  // nios2_custom_instruction_master_multi_slave_translator0:ci_master_start -> custom_instruction_0:start
 	wire         nios2_custom_instruction_master_multi_slave_translator0_ci_master_reset;  // nios2_custom_instruction_master_multi_slave_translator0:ci_master_reset -> custom_instruction_0:reset
 	wire         nios2_custom_instruction_master_multi_slave_translator0_ci_master_done;   // custom_instruction_0:done -> nios2_custom_instruction_master_multi_slave_translator0:ci_master_done
+	wire   [7:0] nios2_custom_instruction_master_multi_slave_translator0_ci_master_n;      // nios2_custom_instruction_master_multi_slave_translator0:ci_master_n -> custom_instruction_0:n
 	wire  [31:0] nios2_data_master_readdata;                                               // mm_interconnect_0:nios2_data_master_readdata -> nios2:d_readdata
 	wire         nios2_data_master_waitrequest;                                            // mm_interconnect_0:nios2_data_master_waitrequest -> nios2:d_waitrequest
 	wire         nios2_data_master_debugaccess;                                            // nios2:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2_data_master_debugaccess
@@ -114,17 +115,16 @@ module Nios (
 	wire         rst_controller_reset_out_reset_req;                                       // rst_controller:reset_req -> [memory:reset_req, nios2:reset_req, rst_translator:reset_req_in]
 	wire         nios2_debug_reset_request_reset;                                          // nios2:debug_reset_request -> rst_controller:reset_in1
 
-	ci_shift #(
-		.LATENCY (0)
-	) custom_instruction_0 (
-		.reset  (nios2_custom_instruction_master_multi_slave_translator0_ci_master_reset),  // nios_custom_instruction_slave.reset
-		.clk    (nios2_custom_instruction_master_multi_slave_translator0_ci_master_clk),    //                              .clk
-		.clk_en (nios2_custom_instruction_master_multi_slave_translator0_ci_master_clk_en), //                              .clk_en
-		.dataa  (nios2_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  //                              .dataa
-		.datab  (nios2_custom_instruction_master_multi_slave_translator0_ci_master_datab),  //                              .datab
-		.start  (nios2_custom_instruction_master_multi_slave_translator0_ci_master_start),  //                              .start
-		.result (nios2_custom_instruction_master_multi_slave_translator0_ci_master_result), //                              .result
-		.done   (nios2_custom_instruction_master_multi_slave_translator0_ci_master_done)    //                              .done
+	macci custom_instruction_0 (
+		.reset  (nios2_custom_instruction_master_multi_slave_translator0_ci_master_reset),  // nios_custom_instruction_slave_1.reset
+		.clk    (nios2_custom_instruction_master_multi_slave_translator0_ci_master_clk),    //                                .clk
+		.clk_en (nios2_custom_instruction_master_multi_slave_translator0_ci_master_clk_en), //                                .clk_en
+		.dataa  (nios2_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  //                                .dataa
+		.datab  (nios2_custom_instruction_master_multi_slave_translator0_ci_master_datab),  //                                .datab
+		.start  (nios2_custom_instruction_master_multi_slave_translator0_ci_master_start),  //                                .start
+		.result (nios2_custom_instruction_master_multi_slave_translator0_ci_master_result), //                                .result
+		.done   (nios2_custom_instruction_master_multi_slave_translator0_ci_master_done),   //                                .done
+		.n      (nios2_custom_instruction_master_multi_slave_translator0_ci_master_n)       //                                .n
 	);
 
 	Nios_jtag jtag (
@@ -337,12 +337,12 @@ module Nios (
 		.ci_master_dataa     (nios2_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  // ci_master.dataa
 		.ci_master_datab     (nios2_custom_instruction_master_multi_slave_translator0_ci_master_datab),  //          .datab
 		.ci_master_result    (nios2_custom_instruction_master_multi_slave_translator0_ci_master_result), //          .result
+		.ci_master_n         (nios2_custom_instruction_master_multi_slave_translator0_ci_master_n),      //          .n
 		.ci_master_clk       (nios2_custom_instruction_master_multi_slave_translator0_ci_master_clk),    //          .clk
 		.ci_master_clken     (nios2_custom_instruction_master_multi_slave_translator0_ci_master_clk_en), //          .clk_en
 		.ci_master_reset     (nios2_custom_instruction_master_multi_slave_translator0_ci_master_reset),  //          .reset
 		.ci_master_start     (nios2_custom_instruction_master_multi_slave_translator0_ci_master_start),  //          .start
 		.ci_master_done      (nios2_custom_instruction_master_multi_slave_translator0_ci_master_done),   //          .done
-		.ci_master_n         (),                                                                         // (terminated)
 		.ci_master_readra    (),                                                                         // (terminated)
 		.ci_master_readrb    (),                                                                         // (terminated)
 		.ci_master_writerc   (),                                                                         // (terminated)

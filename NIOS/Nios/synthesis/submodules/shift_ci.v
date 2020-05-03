@@ -4,6 +4,7 @@ module ci_shift
         input           reset,
         input           clk,
         input           clk_en,
+        input  [7:0]    n,
         input  [31:0]   dataa,
         input  [31:0]   datab, 
         input           start,
@@ -17,6 +18,7 @@ module ci_shift
             .aclr   (reset),
             .clk_en (clk_en),
             .clock  (clk),
+            .n      (n),
             .dataa  (dataa),
             .datab  (datab),
             .result (result_)
