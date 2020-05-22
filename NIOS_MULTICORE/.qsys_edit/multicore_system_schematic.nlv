@@ -1,0 +1,125 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst multicore_system.core_5.timer -pg 1
+preplace inst multicore_system.core_5.nios2.reset_bridge -pg 1
+preplace inst multicore_system.core_0 -pg 1 -lvl 2 -y 50
+preplace inst multicore_system.core_2.clock -pg 1
+preplace inst multicore_system.core_0.rom -pg 1
+preplace inst multicore_system.clk -pg 1 -lvl 1 -y 90
+preplace inst multicore_system.core_1.nios2.clock_bridge -pg 1
+preplace inst multicore_system.core_5.avalon_mailbox_in -pg 1
+preplace inst multicore_system.core_3.custom_instruction -pg 1
+preplace inst multicore_system.core_0.custom_instruction -pg 1
+preplace inst multicore_system.core_1 -pg 1 -lvl 2 -y 190
+preplace inst multicore_system.core_2 -pg 1 -lvl 2 -y 330
+preplace inst multicore_system.sysid -pg 1 -lvl 2 -y 1230
+preplace inst multicore_system.core_6.timer -pg 1
+preplace inst multicore_system.core_3.ram -pg 1
+preplace inst multicore_system.core_3 -pg 1 -lvl 2 -y 470
+preplace inst multicore_system.core_6.ram -pg 1
+preplace inst multicore_system.core_4 -pg 1 -lvl 2 -y 610
+preplace inst multicore_system.core_6.nios2.reset_bridge -pg 1
+preplace inst multicore_system.core_5 -pg 1 -lvl 2 -y 750
+preplace inst multicore_system.core_1.ram -pg 1
+preplace inst multicore_system.core_2.ram -pg 1
+preplace inst multicore_system.core_7.nios2.cpu -pg 1
+preplace inst multicore_system.core_6 -pg 1 -lvl 2 -y 890
+preplace inst multicore_system.core_7 -pg 1 -lvl 2 -y 1030
+preplace inst multicore_system.core_0.clock -pg 1
+preplace inst multicore_system.core_1.rom -pg 1
+preplace inst multicore_system.core_6.avalon_data_bridge -pg 1
+preplace inst multicore_system.core_5.ram -pg 1
+preplace inst multicore_system.core_5.avalon_mailbox_out -pg 1
+preplace inst multicore_system.core_1.nios2 -pg 1
+preplace inst multicore_system.core_3.avalon_data_bridge -pg 1
+preplace inst multicore_system.core_2.custom_instruction -pg 1
+preplace inst multicore_system.core_3.nios2.cpu -pg 1
+preplace inst multicore_system.core_0.timer -pg 1
+preplace inst multicore_system.timer -pg 1 -lvl 2 -y 1310
+preplace inst multicore_system.core_7.clock -pg 1
+preplace inst multicore_system.core_4.nios2 -pg 1
+preplace inst multicore_system.core_5.avalon_data_bridge -pg 1
+preplace inst multicore_system.core_4.clock -pg 1
+preplace inst multicore_system.core_4.avalon_mailbox_out -pg 1
+preplace inst multicore_system.core_6.nios2 -pg 1
+preplace inst multicore_system.core_4.nios2.cpu -pg 1
+preplace inst multicore_system.core_4.nios2.clock_bridge -pg 1
+preplace inst multicore_system.core_0.nios2.cpu -pg 1
+preplace inst multicore_system.core_0.nios2.reset_bridge -pg 1
+preplace inst multicore_system.core_5.nios2.cpu -pg 1
+preplace inst multicore_system.core_4.avalon_data_bridge -pg 1
+preplace inst multicore_system.core_2.nios2.reset_bridge -pg 1
+preplace inst multicore_system.shared_memory -pg 1 -lvl 2 -y 1150
+preplace inst multicore_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst multicore_system.core_2.nios2 -pg 1
+preplace inst multicore_system.core_6.jtag -pg 1
+preplace inst multicore_system.core_7.custom_instruction -pg 1
+preplace inst multicore_system.core_7.avalon_data_bridge -pg 1
+preplace inst multicore_system.core_0.nios2 -pg 1
+preplace inst multicore_system.core_7.nios2.clock_bridge -pg 1
+preplace inst multicore_system.core_5.custom_instruction -pg 1
+preplace inst multicore_system.core_7.nios2.reset_bridge -pg 1
+preplace inst multicore_system.core_4.rom -pg 1
+preplace inst multicore_system.core_3.nios2 -pg 1
+preplace inst multicore_system.core_0.jtag -pg 1
+preplace inst multicore_system.core_6.nios2.cpu -pg 1
+preplace inst multicore_system.core_1.nios2.cpu -pg 1
+preplace inst multicore_system.core_3.nios2.clock_bridge -pg 1
+preplace inst multicore_system.core_2.jtag -pg 1
+preplace inst multicore_system.core_1.avalon_mailbox_in -pg 1
+preplace inst multicore_system.core_6.avalon_mailbox_out -pg 1
+preplace inst multicore_system.core_3.avalon_mailbox_out -pg 1
+preplace inst multicore_system.core_3.avalon_mailbox_in -pg 1
+preplace inst multicore_system.core_4.custom_instruction -pg 1
+preplace inst multicore_system.core_7.avalon_mailbox_out -pg 1
+preplace inst multicore_system.core_0.avalon_mailbox_in -pg 1
+preplace inst multicore_system.core_3.rom -pg 1
+preplace inst multicore_system.core_1.avalon_data_bridge -pg 1
+preplace inst multicore_system.core_5.clock -pg 1
+preplace inst multicore_system.core_3.nios2.reset_bridge -pg 1
+preplace inst multicore_system.core_1.custom_instruction -pg 1
+preplace inst multicore_system.core_2.timer -pg 1
+preplace inst multicore_system.core_5.nios2.clock_bridge -pg 1
+preplace inst multicore_system.core_4.timer -pg 1
+preplace inst multicore_system.core_0.nios2.clock_bridge -pg 1
+preplace inst multicore_system.core_4.nios2.reset_bridge -pg 1
+preplace inst multicore_system.core_1.avalon_mailbox_out -pg 1
+preplace inst multicore_system.core_7.timer -pg 1
+preplace inst multicore_system.core_6.clock -pg 1
+preplace inst multicore_system.core_5.jtag -pg 1
+preplace inst multicore_system.core_2.avalon_mailbox_in -pg 1
+preplace inst multicore_system.core_4.jtag -pg 1
+preplace inst multicore_system.core_0.ram -pg 1
+preplace inst multicore_system.core_2.rom -pg 1
+preplace inst multicore_system.core_7.ram -pg 1
+preplace inst multicore_system.core_7.avalon_mailbox_in -pg 1
+preplace inst multicore_system.core_5.rom -pg 1
+preplace inst multicore_system.core_5.nios2 -pg 1
+preplace inst multicore_system.core_2.nios2.clock_bridge -pg 1
+preplace inst multicore_system.core_2.nios2.cpu -pg 1
+preplace inst multicore_system.core_7.rom -pg 1
+preplace inst multicore_system.core_1.timer -pg 1
+preplace inst multicore_system.core_1.jtag -pg 1
+preplace inst multicore_system.core_6.nios2.clock_bridge -pg 1
+preplace inst multicore_system.core_3.jtag -pg 1
+preplace inst multicore_system.core_6.custom_instruction -pg 1
+preplace inst multicore_system.core_4.ram -pg 1
+preplace inst multicore_system.core_0.avalon_data_bridge -pg 1
+preplace inst multicore_system.core_1.clock -pg 1
+preplace inst multicore_system.core_0.avalon_mailbox_out -pg 1
+preplace inst multicore_system.core_6.avalon_mailbox_in -pg 1
+preplace inst multicore_system.core_2.avalon_data_bridge -pg 1
+preplace inst multicore_system.core_4.avalon_mailbox_in -pg 1
+preplace inst multicore_system.core_3.timer -pg 1
+preplace inst multicore_system.core_6.rom -pg 1
+preplace inst multicore_system.core_2.avalon_mailbox_out -pg 1
+preplace inst multicore_system.core_7.nios2 -pg 1
+preplace inst multicore_system.core_7.jtag -pg 1
+preplace inst multicore_system.core_3.clock -pg 1
+preplace inst multicore_system.core_1.nios2.reset_bridge -pg 1
+preplace netloc EXPORT<net_container>multicore_system</net_container>(SLAVE)multicore_system.reset,(SLAVE)clk.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>multicore_system</net_container>(SLAVE)multicore_system.clk,(SLAVE)clk.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>multicore_system</net_container>(SLAVE)core_7.clk,(SLAVE)core_3.clk,(SLAVE)core_5.clk,(MASTER)clk.clk,(SLAVE)core_0.clk,(SLAVE)core_1.clk,(SLAVE)core_6.clk,(SLAVE)sysid.clk,(SLAVE)core_4.clk,(SLAVE)timer.clk,(SLAVE)shared_memory.clk1,(SLAVE)core_2.clk) 1 1 1 280
+preplace netloc FAN_OUT<net_container>multicore_system</net_container>(SLAVE)core_1.reset,(SLAVE)shared_memory.reset1,(SLAVE)core_5.reset,(SLAVE)core_6.reset,(SLAVE)sysid.reset,(SLAVE)core_2.reset,(MASTER)clk.clk_reset,(SLAVE)core_3.reset,(SLAVE)core_4.reset,(SLAVE)timer.reset,(SLAVE)core_0.reset,(SLAVE)core_7.reset) 1 1 1 260
+levelinfo -pg 1 0 50 530
+levelinfo -hier multicore_system 60 90 370 520

@@ -1,0 +1,30 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_core.nios2.clock_bridge -pg 1
+preplace inst nios_core.nios2.cpu -pg 1
+preplace inst nios_core.nios2.reset_bridge -pg 1
+preplace inst nios_core.jtag -pg 1 -lvl 3 -y 250
+preplace inst nios_core.clock -pg 1 -lvl 1 -y 70
+preplace inst nios_core -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_core.rom -pg 1 -lvl 3 -y 150
+preplace inst nios_core.nios2 -pg 1 -lvl 2 -y 140
+preplace inst nios_core.custom_instruction -pg 1 -lvl 3 -y 30
+preplace inst nios_core.timer -pg 1 -lvl 3 -y 350
+preplace inst nios_core.ram -pg 1 -lvl 3 -y 70
+preplace inst nios_core.avalon_mailbox_out -pg 1 -lvl 3 -y 550
+preplace inst nios_core.avalon_data_bridge -pg 1 -lvl 3 -y 650
+preplace inst nios_core.avalon_mailbox_in -pg 1 -lvl 3 -y 450
+preplace netloc EXPORT<net_container>nios_core</net_container>(SLAVE)avalon_mailbox_out.avmm_msg_receiver,(SLAVE)nios_core.mailbox_out) 1 0 3 NJ 560 NJ 560 NJ
+preplace netloc POINT_TO_POINT<net_container>nios_core</net_container>(MASTER)nios2.tightly_coupled_instruction_master_0,(SLAVE)rom.s1) 1 2 1 780
+preplace netloc INTERCONNECT<net_container>nios_core</net_container>(SLAVE)avalon_mailbox_in.avmm_msg_receiver,(SLAVE)avalon_mailbox_out.avmm_msg_sender,(SLAVE)nios2.debug_mem_slave,(MASTER)nios2.instruction_master,(MASTER)nios2.data_master,(SLAVE)avalon_data_bridge.s0,(SLAVE)rom.s2,(SLAVE)timer.s1,(SLAVE)jtag.avalon_jtag_slave) 1 1 2 310 580 740
+preplace netloc EXPORT<net_container>nios_core</net_container>(SLAVE)clock.clk_in,(SLAVE)nios_core.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nios_core</net_container>(SLAVE)jtag.irq,(SLAVE)timer.irq,(MASTER)nios2.irq) 1 2 1 700
+preplace netloc POINT_TO_POINT<net_container>nios_core</net_container>(SLAVE)ram.s1,(MASTER)nios2.tightly_coupled_data_master_0) 1 2 1 720
+preplace netloc EXPORT<net_container>nios_core</net_container>(SLAVE)clock.clk_in_reset,(SLAVE)nios_core.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_core</net_container>(MASTER)nios_core.data_master,(MASTER)avalon_data_bridge.m0) 1 3 1 N
+preplace netloc INTERCONNECT<net_container>nios_core</net_container>(SLAVE)jtag.reset,(SLAVE)timer.reset,(SLAVE)rom.reset1,(MASTER)nios2.debug_reset_request,(SLAVE)nios2.reset,(SLAVE)ram.reset1,(SLAVE)avalon_data_bridge.reset,(MASTER)clock.clk_reset,(SLAVE)avalon_mailbox_out.rst_n,(SLAVE)avalon_mailbox_in.rst_n) 1 1 2 290 100 760
+preplace netloc EXPORT<net_container>nios_core</net_container>(SLAVE)avalon_mailbox_in.avmm_msg_sender,(SLAVE)nios_core.mailbox_in) 1 0 3 NJ 480 NJ 480 NJ
+preplace netloc POINT_TO_POINT<net_container>nios_core</net_container>(MASTER)nios2.custom_instruction_master,(SLAVE)custom_instruction.nios_custom_instruction_slave) 1 2 1 700
+preplace netloc FAN_OUT<net_container>nios_core</net_container>(SLAVE)avalon_mailbox_in.clk,(SLAVE)nios2.clk,(SLAVE)jtag.clk,(SLAVE)avalon_mailbox_out.clk,(SLAVE)timer.clk,(SLAVE)rom.clk1,(MASTER)clock.clk,(SLAVE)avalon_data_bridge.clk,(SLAVE)ram.clk1) 1 1 2 310 80 800
+levelinfo -pg 1 0 80 1170
+levelinfo -hier nios_core 90 120 430 860 1070
